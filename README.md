@@ -1,5 +1,7 @@
 blog
 
+[![Build](https://github.com/roalcantara/blog/actions/workflows/build.yml/badge.svg)]
+
 A Simple Blog with Spring Boot and Kotlin
 
 [![MIT license](https://img.shields.io/badge/License-MIT-brightgreen.svg)](LICENSE)
@@ -47,6 +49,7 @@ git push -u origin main
 - [Conventional Commits][7]
 - [Semantic Release][9]
 - [Building web applications with Spring Boot and Kotlin][10]
+- [Kotlin & Java CI with Github Actions][12]
 
 ## Contributing
 
@@ -71,3 +74,4 @@ The project is available as open source under the terms of the [MIT][1] [License
 [9]: https://semantic-release.gitbook.io/semantic-release 'Semantic Release'
 [10]: https://spring.io/guides/tutorials/spring-boot-kotlin 'Building web applications with Spring Boot and Kotlin'
 [11]: https://youtu.be/3SNKdr3f9Io 'How to dockerize your Spring Boot API'
+[12]: https://ryanharrison.co.uk/2020/04/12/kotlin-java-ci-with-github-actions.html 'Kotlin & Java CI with Github Actions'
