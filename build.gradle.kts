@@ -27,7 +27,12 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	developmentOnly("org.springframework.boot:spring-boot-devtools")
 	runtimeOnly("com.h2database:h2")
-	testImplementation("org.springframework.boot:spring-boot-starter-test")
+  testImplementation("org.springframework.boot:spring-boot-starter-test") {
+		exclude(module = "mockito-core")
+	}
+	testImplementation("org.junit.jupiter:junit-jupiter-api")
+	testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine")
+	testImplementation("com.ninja-squad:springmockk:4.0.0")
 }
 
 tasks.withType<KotlinCompile> {
@@ -35,6 +40,12 @@ tasks.withType<KotlinCompile> {
 		freeCompilerArgs += "-Xjsr305=strict"
 		jvmTarget = "17"
 	}
+}
+
+allOpen {
+	annotation("jakarta.persistence.Entity")
+	annotation("jakarta.persistence.Embeddable")
+	annotation("jakarta.persistence.MappedSuperclass")
 }
 
 tasks.withType<Test> {
